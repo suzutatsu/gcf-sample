@@ -12,7 +12,8 @@ exports.checkJobStatus = (event, callback) => {
     const projectId = 'sandbox-xxxxx';
     const BigQuery = require('@google-cloud/bigquery');
     const bigquery = new BigQuery({
-        projectId: projectId
+        projectId: projectId,
+        location: 'asia-northeast1'
     });
 
     const job = bigquery.job(jobid);
